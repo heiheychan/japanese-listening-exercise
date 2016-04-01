@@ -94,9 +94,9 @@ $(document).on('click', 'div.all_answers p', function(){
       if (score === question.length) {
         $('p.warm_reminder').text('Yes! You get all the correct answers. So what?');
       } else if (score/question.length > 0.6) {
-        $('p.warm_reminder').text('Your stupidity makes me sick :P');
+        $('p.warm_reminder').text('some text to indicate a student did fine');
       } else {
-        $('p.warm_reminder').text('I recommend you quit learning Japanese! You are too dumb for that!');
+        $('p.warm_reminder').text('some text to tell the student to study harder or drop the class');
       };
       $('div.wrapper.ending').show();
       $('html').offset({top: 0});
