@@ -119,3 +119,65 @@ div.ending p {
   font-size: 20px;
   margin-top: 10px;
 }
+
+/* pop up */
+div#my_popup {
+  padding-top:100px;
+  padding-bottom: 100px;
+}
+
+div#my_popup div.innerpopup {
+  background-color: white;
+  padding: 15px 50px 15px 40px;
+}
+
+div#my_popup table {
+  margin: 10px;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  border: 1px solid silver;
+}
+
+div#my_popup table td,
+div#my_popup table th {
+  padding: 30px 30px 30px 20px;
+  text-align: center;
+  border: 1px solid silver;
+}
+
+div#my_popup table td div.pic1 {
+  background-image: url("../assets/himawan_profile.jpg");
+}
+
+div#my_popup table td div.profile {
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+div#my_popup button.my_popup_close {
+  padding: 20px 50px 20px 50px;
+  border-radius: 3px;
+  border: 1px solid silver;
+  background-color: white;
+}
+
+/* Manual Popup open */
+div.wrapper h1 button.my_popup_open {
+  font-size: 15px;
+  padding: 12px 20px 12px 20px;
+  margin-left: 20px;
+  background-color: white;
+  border: 1px solid silver;
+}
+
+
+
+
+
+
+
+
+

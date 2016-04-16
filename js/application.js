@@ -43,6 +43,14 @@ var question = [
   }
 ];
 
+$('#my_popup').popup({
+  transition: 'all 0.5s'
+});
+
+(function(){
+  $('#my_popup').popup('show');
+})()
+
 var getReady = function (){
   $(".question iframe").attr("src", question[current_position]["scene_url"]);
   $(".question h3.scene_name").text(question[current_position]["scene_name"]);

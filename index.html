@@ -13,13 +13,52 @@
     <!-- Javascript -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.popupoverlay.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
     <!-- Title -->
     <title>JTM</title>
   </head>
   <body>
+    <!-- The popup -->
+    <div id="my_popup">
+      <div class="innerpopup">
+      <h2>Characters</h2>
+      <table>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="profile pic1"></div>
+          </td>
+          <td>ヒマワンさん</td>
+          <td>とてもやさしくて、あたまがよくて、かっこいいひとです。</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="profile pic1"></div>
+          </td>
+          <td>ヒマワンさん</td>
+          <td>とてもやさしくて、あたまがよくて、かっこいいひとです。</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="profile pic1"></div>
+          </td>
+          <td>ヒマワンさん</td>
+          <td>とてもやさしくて、あたまがよくて、かっこいいひとです。</td>
+        </tr>
+      </table>
+        <button class="my_popup_close">Close</button>
+      </div>
+    </div>
     <div class="wrapper progressing col-lg-12">
-      <h1 class="col-lg-12">GENKI I リスニング</h1>
+      <h1 class="col-lg-12">
+        GENKI I リスニング
+        <button class="my_popup_open">Characters List</button>
+      </h1>
       <div class="progress_bar col-lg-12">
         <div class="progress">
           <div class="progress-bar progress-bar-striped active" role="progressbar"
