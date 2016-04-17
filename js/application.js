@@ -10,7 +10,7 @@ var question = [
     scene_difficulty: "簡単",
     scene_d: 'e',
     scene_description: "sometitle lol sometitle..sdfdskjfbfd dafsd dsafsda dsafsda",
-    q: "My first question would be what is the question?",
+    q: "What does ウォーカーさん think is more important? Where are チェンさん and ウォーカーさん studying later?",
     a_a: "random answer bra bra bra bra",
     a_b: "random answer bra bra bra bra",
     a_c: "random answer bra bra bra bra",
@@ -22,7 +22,7 @@ var question = [
     scene_difficulty: "一般",
     scene_d: 'm',
     scene_description: "dnfbams dsaf sdf dsf dsf sda fsdaf qwe qw e sadas d as asfd dsfas df a sd asd as das das da sd qwe qw das d dsad sadasdasda sadasd",
-    q: "My second question is why Bill is so dumb?",
+    q: "Why does チェンさん san want to go to the party now? Did they チェンさん and ウォーカーさん finish their homework?",
     a_a: "random answer bra bra bra bra",
     a_b: "random answer bra bra bra bra",
     a_c: "random answer bra bra bra bra",
@@ -34,7 +34,7 @@ var question = [
     scene_difficulty: "難しい",
     scene_d: 'h',
     scene_description: "Four girls dancing in the campus! And the passerbys are super confused @@ wtf wtf! why?!!!!!! why?",
-    q: "My last question is that how Bill solves this programming problem?",
+    q: "How many girlfriends did プランプラクマさん have? Who is dating プランプラクマさんnow?",
     a_a: "random answer bra bra bra bra",
     a_b: "random answer bra bra bra bra",
     a_c: "random answer bra bra bra bra",
@@ -114,7 +114,7 @@ $(document).on('click', 'div.all_answers p', function(){
   } 
 })
 
-// Get Started!************************************
+// Get Started!***
 getReady();
 
 })
