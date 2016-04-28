@@ -5,7 +5,6 @@ var current_position = 0;
 var percentage = 0;
 var question = [
   {
-    scene_url: "missing",
     scene_name: "To go or not to go, that is the question",
     scene_difficulty: "簡単",
     scene_d: 'e',
@@ -17,7 +16,6 @@ var question = [
     a_d: "フォスターさん",
     a: "b"
   },{
-    scene_url: "missing", 
     scene_name: "To go or not to go, that is the question",
     scene_difficulty: "簡単",
     scene_d: 'e',
@@ -29,7 +27,6 @@ var question = [
     a_d: "Ugli",
     a: "c"
   },{
-    scene_url: "https://www.youtube.com/embed/v6kDlHViI7s",
     scene_name: "Plot twist, change of plans",
     scene_difficulty: "一般",
     scene_d: 'm',
@@ -41,7 +38,6 @@ var question = [
     a_d: "ウォーカーさんpersuaded her not to",
     a: "b"
   },{
-    scene_url: "https://www.youtube.com/embed/v6kDlHViI7s",
     scene_name: "Plot twist, change of plans",
     scene_difficulty: "一般",
     scene_d: 'm',
@@ -53,7 +49,6 @@ var question = [
     a_d: "No, they want to piss off もりせんせい",
     a: "c"
   },{
-    scene_url: "https://www.youtube.com/embed/H08V2stg_kc",
     scene_name: "Post major-let down-party discussion",
     scene_difficulty: "一般",
     scene_d: 'm',
@@ -65,7 +60,6 @@ var question = [
     a_d: "Guy wearing green shirt and glasses",
     a: "d"
   },{
-    scene_url: "https://www.youtube.com/embed/H08V2stg_kc",
     scene_name: "Post major-let down-party discussion",
     scene_difficulty: "一般",
     scene_d: 'm',
@@ -77,7 +71,6 @@ var question = [
     a_d: "Music was too loud",
     a: "a"
   }, {
-    scene_url: "https://www.youtube.com/embed/aHq71X2EhSw",
     scene_name: "Homage to プランプラクマさん the great",
     scene_difficulty: "難しい",
     scene_d: 'd',
@@ -89,7 +82,6 @@ var question = [
     a_d: "6 people",
     a: "c"
   },{
-    scene_url: "https://www.youtube.com/embed/aHq71X2EhSw",
     scene_name: "Homage to プランプラクマさん the great",
     scene_difficulty: "難しい",
     scene_d: 'd',
@@ -103,6 +95,13 @@ var question = [
   }
 ];
 
+var video = [
+  "https://www.youtube.com/embed/JLXY25XQ3RE",
+  "https://www.youtube.com/embed/v6kDlHViI7s",
+  "https://www.youtube.com/embed/H08V2stg_kc",
+  "https://www.youtube.com/embed/aHq71X2EhSw"
+];
+
 $('#my_popup').popup({
   transition: 'all 0.5s'
 });
@@ -112,7 +111,9 @@ $('#my_popup').popup({
 })()
 
 var getReady = function (){
-  $(".question iframe").attr("src", question[current_position]["scene_url"]);
+  if ((current_position + 1)%2 !== 0){
+    $(".question iframe").attr("src", video[Math.floor(current_position/2)]);
+  };
   $(".question h3.scene_name").text(question[current_position]["scene_name"]);
   $(".question p.q_difficulty").text(question[current_position]["scene_difficulty"]);
   $(".question p.q_description").text(question[current_position]["scene_description"]);
@@ -174,7 +175,7 @@ $(document).on('click', 'div.all_answers p', function(){
   } 
 })
 
-// Get Started!***
+// Get Started!
 getReady();
 
 })
