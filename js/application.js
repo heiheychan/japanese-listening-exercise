@@ -121,14 +121,17 @@ var getReady = function (){
   $(".question p.q_description").text(question[current_position]["scene_description"]);
 
   $("div.answer p.q_q").text(question[current_position]["q"])
-  $("div.all_answers p.aa span:nth-child(2)").text(question[current_position]["a_a"]);
-  $("div.all_answers p.ab span:nth-child(2)").text(question[current_position]["a_b"]);
-  $("div.all_answers p.ac span:nth-child(2)").text(question[current_position]["a_c"]);
-  $("div.all_answers p.ad span.a_content span").text(question[current_position]["a_d"]);
+  $(".all_answers div:nth-child(1) p:nth-child(2)").text(question[current_position]["a_a"]);
+  $(".all_answers div:nth-child(2) p:nth-child(2)").text(question[current_position]["a_b"]);
+  $(".all_answers div:nth-child(3) p:nth-child(2)").text(question[current_position]["a_c"]);
+  $(".all_answers div:nth-child(4) p:nth-child(2)").text(question[current_position]["a_d"]);
 
 // Adjust the progress bar
   percentage = Math.round((current_position+1)/question.length*100)
   percentage = parseInt(percentage);
+  if (percentage == 100) {
+    percentage = 99;
+  }
    $('div.progress-bar').attr('aria-valuenow', percentage);
    $('div.progress-bar').attr('style', 'width:' + percentage + '%');
    $('div.progress-bar span').text(percentage);
@@ -150,7 +153,7 @@ var getReady = function (){
    }
 }
 
-$(document).on('click', 'div.all_answers p', function(){
+$(document).on('click', '.all_answers .op', function(){
   if ($(this).attr("value") === question[current_position]["a"]) {
     score ++;
   }
