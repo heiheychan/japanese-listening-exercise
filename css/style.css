@@ -81,6 +81,7 @@ div.answer p.answer_q {
   display: inline-block;
   vertical-align: middle;
   padding: 10px;
+  margin: 0;
 }
 
 .op p:nth-child(2) {
@@ -89,11 +90,13 @@ div.answer p.answer_q {
   max-width: 70%;
   margin-left: 8px;
   padding: 10px;
+  margin: 0;
 }
 
 .op:hover {
   background-color: LightSkyBlue;
   color: white;
+  cursor: pointer;
 }
 
 .op:hover .question_no {
